@@ -47,6 +47,16 @@
     },
     "server": {
       "cache": true
+    },
+    "@angular-devkit/build-angular:application": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "plugins": [
@@ -64,6 +74,14 @@
       "options": {
         "targetName": "lint"
       }
+    },
+    {
+      "plugin": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview"
+      }
     }
   ],
   "generators": {
@@ -74,5 +92,10 @@
       "unitTestRunner": "jest"
     }
   },
-  "nxCloudAccessToken": "Njc5YTAxOTQtMzFhNS00MDBkLTg2N2UtMzE4NTBiZTNkZmRkfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "Njc5YTAxOTQtMzFhNS00MDBkLTg2N2UtMzE4NTBiZTNkZmRkfHJlYWQtd3JpdGU=",
+  "release": {
+    "version": {
+      "preVersionCommand": "npx nx run-many -t build"
+    }
+  }
 }

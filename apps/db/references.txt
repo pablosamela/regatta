@@ -1,0 +1,29 @@
+Vessel 
+
+Boat name
+Category
+Model
+Year of built
+Builder
+Architect / Designer
+Flag nationality
+
+Length overall (LOA)
+Length waterline (LWL)
+beam
+draft
+Keel
+Deck
+Weight
+Displacement
+Ballast
+
+Rigging
+Hull
+Hull material
+Hull colour
+Hull number
+
+Sails
+Engine
+fuel type

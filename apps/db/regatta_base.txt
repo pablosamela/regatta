@@ -1,0 +1,97 @@
+regatta
+  id
+  id_institution_organizer
+  id_type
+  id_event
+  id_serie 
+  id_skipper
+  id_status
+  regata_number
+  event_date
+  hour_date
+  position_serie
+  position_general
+  start_time
+  finish_time
+  real_time
+  corrected_time
+  points 
+  serie_position
+  general_position
+
+status
+  id
+  name
+
+skipper 
+  id
+  name
+
+serie
+  id
+  name
+
+event
+  id
+  name
+
+institution
+  id
+  name
+  address
+
+type
+  id
+  name
+
+-----------------------------
+
+category
+  id
+  name
+
+class
+  id
+  name
+  rating
+
+builder
+  id
+  name
+
+architect
+  id
+  name
+country
+  id
+  name
+
+
+Vessel
+  id_class
+  id_builder
+  id_category
+  id_architect
+  id_country
+
+  name
+  yearOfBuilt
+  lengthoverall
+  lengthwaterline
+  beam
+  draft
+  keel
+  deck
+  weight
+  displacement
+  ballast
+  rigging
+  hull
+  hullmaterial
+  hullcolour
+  hullnumber
+  sails
+  engine
+  fuel_type
+  sail_number
+  rating
