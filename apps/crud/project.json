@@ -8,12 +8,16 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/crud",
         "index": "apps/crud/src/index.html",
         "browser": "apps/crud/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/crud/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -22,7 +26,10 @@
             "input": "apps/crud/public"
           }
         ],
-        "styles": ["apps/crud/src/styles.scss"],
+        "styles": [
+          "@angular/material/prebuilt-themes/azure-blue.css",
+          "apps/crud/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -51,6 +58,10 @@
     },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "port": 4201,
+        "proxyConfig": "apps/crud/proxy.conf.json"
+      },
       "configurations": {
         "production": {
           "buildTarget": "crud:build:production"
@@ -72,7 +83,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/crud/jest.config.ts"
       }
@@ -81,7 +94,7 @@
       "executor": "@nx/web:file-server",
       "options": {
         "buildTarget": "crud:build",
-        "port": 4200,
+        "port": 4201,
         "staticFilePath": "dist/apps/crud/browser",
         "spa": true
       }

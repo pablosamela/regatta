@@ -1,0 +1,34 @@
+<header>
+  <mat-toolbar>
+    <button mat-icon-button (click)="opened = true">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+    <mat-icon fontIcon="sailing" aria-hidden="false" aria-label="Regatta">Regatta+</mat-icon>
+    <span class="example-spacer"></span>
+    <h1>
+      Regatta+
+    </h1>
+  </mat-toolbar>
+</header>
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="opened" mode="side" [fixedInViewport]="true" >
+    <div class="close">
+      <button mat-icon-button (click)="opened = false">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <div class="items">
+      <mat-divider></mat-divider>
+      <button routerLink="/home" mat-button>
+        <mat-icon>anchor</mat-icon>
+          Home
+      </button>
+      <mat-divider></mat-divider>
+      <button routerLink="/continent" mat-button>
+        <mat-icon>anchor</mat-icon>
+          Continents
+      </button>
+    </div>
+  </mat-sidenav>
+</mat-sidenav-container>
