@@ -1,8 +1,10 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 
 import { CountryService } from './country.service';
 import { Country } from './entities/country.entity';
 
+@ApiTags('Countries')
 @Controller('country')
 export class CountryController {
   constructor(private readonly countryService: CountryService) {}

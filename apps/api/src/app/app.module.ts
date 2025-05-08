@@ -5,8 +5,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 import { ContinentsModule } from './modules/continents/continents.module';
-import { Continent } from './modules/continents/entities/continent.entity';
 import { CountryModule } from './modules/country/country.module';
+import { Continent } from './modules/continents/entities/continent.entity';
 import { Country } from './modules/country/entities/country.entity';
 
 @Module({

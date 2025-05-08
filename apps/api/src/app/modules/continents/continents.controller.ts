@@ -1,7 +1,10 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
+
 import { ContinentsService } from './continents.service';
 import { Continent } from './entities/continent.entity';
 
+@ApiTags('Continents')
 @Controller('continent')
 export class ContinentsController {
   constructor(private readonly continentsService: ContinentsService) {}
